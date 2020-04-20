@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Rock, Paper, Scissors</title>
+    </head>
+    <body>
+        <h1>Rock, Paper, Scissors</h1>
+
+        <form>
+            <p>Select your weapon!</p>
+            <label for="rock">
+                <input type="radio" id="rock" name="weapon" value="rock">Rock
+            </label>
+            <br>
+            <label for="paper">
+                <input type="radio" id="paper" name="weapon" value="paper">Paper
+            </label>
+            <br>
+            <label for="scissors">
+                <input type="radio" id="scissors" name="weapon"
+                    value="scissors">Scissors
+            </label>
+            <br>
+            <br>
+            <button id="submit">Submit Weapon</button>
+        </form>
+
+        <p id="user-weapon">You have selected <div id="user-input">[user input]</div></p>
+        <br>
+        <p id="computer-weapon">The computer has selected <div
+                id="computer-input">[computer input]</div></p>
+        <br>
+        <div id="win-lose"></div>
+        <p>Your points: <div id="user-points"></div></p>
+        <p>Computer's points: <div id="computer-points"></div></p>
+    </body>
+    <script src="./script.js">
+    
+
+ 
+        // // Define variables
+        // let usersWeapon = [];
+        // let computerWeapon;
+        // let weaponsOptions = ["rock", "paper", "scissors"]
+
+        // // Grab the user's input and store it in a variable //
+        // let getValue = function() {
+        //     let checkedWeapon = document.getElementsByName("weapon");
+        //     let userOptions = [];
+
+        //         for (let i = 0; i < checkedWeapon.length; i++) {
+        //             userOptions.push(checkedWeapon[i].checked)
+        //         };
+        //     console.log(userOptions);
+        // };
+
+        // console.log(usersWeapon); //works
+        
+        // // Pick a randon value for the computer's weapon
+        // function pickCompWeap() {
+        //     let randomPick = Math.floor(Math.random()*2)
+        //     chosenWeapon = weaponsOptions[randomPick]
+        //     console.log(chosenWeapon)
+        // }
+      
+        // if (document.getElementById("rock").checked === true ) {
+        //     userInput = document.getElementById.value
+        //     console.log(userInput
+        // } else {
+        //     console.log("You picked nothing")
+        // }
+
+        // if (checkedWeapon[i].checked) {
+        //             let pickedWeapon = checkedWeapon[i].value
+        //             userInput.push(pickedWeapon);
+        //         };
+        // onclick="getValue()"
+
+    </script>
+</html>
