@@ -18,18 +18,43 @@ var computerPick = function () {
 var gameLogic = function (compChoice) {
 
     if (compChoice === "ROCK" && rock.checked || compChoice === "PAPER" && paper.checked || compChoice === "SCISSORS" && scissors.checked) {
-        alert("It's a tie! Try ")
+        alert("It's a tie! Try again")
     } else
         if (compChoice === "ROCK" && paper.checked) {
-            console.log("You won this round!")
             userScore++
+            console.log("You won this round!")
             console.log(userScore)
             console.log(compScore)
         } else
             if (compChoice === "ROCK" && scissors.checked) {
+                compScore++
                 console.log("You lost this round")
-
-            }
+                console.log(userScore)
+                console.log(compScore)
+            } else
+                if (compChoice === "PAPER" && rock.checked) {
+                    compScore++
+                    console.log("You lost this round")
+                    console.log(userScore);
+                    console.log(compScore);
+                } else
+                    if (compChoice === "PAPER" && scissors.checked) {
+                        userScore++;
+                        console.log("You won this round!");
+                        console.log(userScore);
+                        console.log(compScore);
+                    } else
+                        if (compChoice === "SCISSORS" && rock.checked) {
+                            userScore++;
+                            console.log("You won this round!");
+                            console.log(userScore);
+                            console.log(compScore);
+                        } else
+                            if (compChoice === "SCISSORS" && paper.checked)
+                                compChoice++
+    console.log("You lost this round")
+    console.log(userScore);
+    console.log(compScore);
 }
 
 submitEl.addEventListener("click", function (event) {
@@ -41,10 +66,10 @@ submitEl.addEventListener("click", function (event) {
         // write to HTML saying you have chosen "rock"
         document.querySelector("#user-input").innerHTML = "ROCK"
         // computer picks
-        computerPick();
-        console.log(computerPick())
+        var compPick = computerPick();
+        console.log(compPick)
         // determine who wins
-
+        gameLogic(compPick);
         // add to respective score
         // check to see if score is equal to 10
         // if no, alert user to pick again
