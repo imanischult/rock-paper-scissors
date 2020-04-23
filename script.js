@@ -50,11 +50,12 @@ var gameLogic = function (compChoice) {
                             console.log(userScore);
                             console.log(compScore);
                         } else
-                            if (compChoice === "SCISSORS" && paper.checked)
-                                compChoice++
-    console.log("You lost this round")
-    console.log(userScore);
-    console.log(compScore);
+                            if (compChoice === "SCISSORS" && paper.checked) {
+                                compChoice++;
+                                console.log("You lost this round");
+                                console.log(userScore);
+                                console.log(compScore);
+                            };
 }
 
 submitEl.addEventListener("click", function (event) {
