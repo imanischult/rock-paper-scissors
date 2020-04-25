@@ -20,20 +20,38 @@ var pointCheck = function (user, computer) {
         document.getElementById("choose").innerHTML = "Pick again!";
     } else if (computer === 10) {
         document.getElementById("win-lose").innerHTML = "You lost the game!";
+        document.getElementById("choose").innerHTML = "";
+        document.getElementById("user-weapon").style.display = "none";
+        document.getElementById("computer-weapon").style.display = "none";
+        document.getElementById("user-input").innerHTML = "";
+        document.getElementById("computer-input").innerHTML = "";
+        document.getElementById("weapon-form").style.display = "none"
         displayRestart();
     } else if (user === 10) {
         document.getElementById("win-lose").innerHTML = "You won the game!";
+        document.getElementById("choose").innerHTML = "";
+        document.getElementById("user-weapon").style.display = "none";
+        document.getElementById("computer-weapon").style.display = "none";
+        document.getElementById("user-input").innerHTML = "";
+        document.getElementById("computer-input").innerHTML = "";
+        document.getElementById("weapon-form").style.display = "none"
         displayRestart()
     };
 };
 
 var restart = function () {
     hideRestart();
+    document.getElementById("weapon-form").style.display = "block"
     document.getElementById("choose").innerHTML = "";
-    document.getElementById("user-input").style.display = "none";
-    document.getElementById("computer-input").style.display = "none";
+    document.getElementById("user-input").innerHTML = "";
+    document.getElementById("computer-input").innerHTML = "";
     userScore = 0;
     compScore = 0;
+    document.querySelector("#user-points").innerHTML = userScore;
+    document.querySelector("#computer-points").innerHTML = compScore;
+    document.getElementById("win-lose").innerHTML = "";
+    document.getElementById("user-weapon").style.display = "block";
+    document.getElementById("computer-weapon").style.display = "block"
 }
 
 var goodGame = function () {
@@ -104,21 +122,13 @@ submitEl.addEventListener("click", function (event) {
     if (rock.checked === false && paper.checked === false && scissors.checked === false) {
         alert("You must select a weapon!")
     } else if (rock.checked) {
-        console.log("Rock")
         // write to HTML saying you have chosen "rock"
         document.querySelector("#user-input").innerHTML = "ROCK"
         // computer picks
         var compPick = computerPick();
         // determine who wins
         gameLogic(compPick);
-        // add to respective score
-        // check to see if score is equal to 10
-        // if no, alert user to pick again
-        // if yes, check to see who won
-        // tell user who won
-        // ask user if they would like to play again
     } else if (paper.checked) {
-        console.log("Paper")
         // write to HTML saying you have chosen "paper"
         document.querySelector("#user-input").innerHTML = "PAPER"
         // computer picks
@@ -126,7 +136,6 @@ submitEl.addEventListener("click", function (event) {
         // determine who wins
         gameLogic(compPick);
     } else if (scissors.checked) {
-        console.log("Scissors")
         // write to HTML saying you have chosen "scissors"
         document.querySelector("#user-input").innerHTML = "SCISSORS"
         // computer picks
