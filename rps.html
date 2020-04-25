@@ -28,14 +28,20 @@
             <button id="submit">Submit Weapon</button>
         </form>
 
-        <p id="user-weapon">You have selected <div id="user-input">[user input]</div></p>
+        <p id="user-weapon">You have selected <div id="user-input"></div></p>
         <br>
         <p id="computer-weapon">The computer has selected <div
-                id="computer-input">[computer input]</div></p>
+                id="computer-input"></div></p>
         <br>
         <div id="win-lose"></div>
-        <p>Your points: <div id="user-points"></div></p>
-        <p>Computer's points: <div id="computer-points"></div></p>
+        <div id="choose"></div>
+        <div id="restart">
+            <p>Would you like to play again?</p>
+            <button id="btn-yes" onclick="restart()">Yes</button>
+            <button id="btn-no" onclick="goodGame()">No</button>
+        </div>
+        <p id="user-final">Your points: <div id="user-points"></div></p>
+        <p id="comp-final">Computer's points: <div id="computer-points"></div></p>
     </body>
     <script src="./script.js"></script>
 </html>
