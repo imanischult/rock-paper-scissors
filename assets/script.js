@@ -6,6 +6,7 @@ var weapons = ["ROCK", "PAPER", "SCISSORS"];
 var userScore = 0;
 var compScore = 0;
 
+// reusable functions
 var computerPick = function () {
     var weapon
     var weaponNum = Math.floor((Math.random() * 3));
@@ -115,6 +116,8 @@ var gameLogic = function (compChoice) {
     };
 }
 
+
+// Game Logic
 hideRestart();
 
 submitEl.addEventListener("click", function (event) {
