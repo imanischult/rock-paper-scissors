@@ -1,3 +1,4 @@
+// global variables
 var submitEl = document.querySelector("#submit");
 var rock = document.querySelector("#rock");
 var paper = document.querySelector("#paper");
@@ -6,7 +7,7 @@ var weapons = ["ROCK", "PAPER", "SCISSORS"];
 var userScore = 0;
 var compScore = 0;
 
-// reusable functions
+// global functions
 var computerPick = function () {
     var weapon
     var weaponNum = Math.floor((Math.random() * 3));
@@ -132,18 +133,12 @@ submitEl.addEventListener("click", function (event) {
         // determine who wins
         gameLogic(compPick);
     } else if (paper.checked) {
-        // write to HTML saying you have chosen "paper"
         document.querySelector("#user-input").innerHTML = "PAPER"
-        // computer picks
         var compPick = computerPick();
-        // determine who wins
         gameLogic(compPick);
     } else if (scissors.checked) {
-        // write to HTML saying you have chosen "scissors"
         document.querySelector("#user-input").innerHTML = "SCISSORS"
-        // computer picks
         var compPick = computerPick();
-        // determine who wins
         gameLogic(compPick);
     }
 });
